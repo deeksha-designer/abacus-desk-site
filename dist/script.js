@@ -51,6 +51,30 @@ if (menuButton && mobileMenu) {
   mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 }
 
+const customerStory = document.querySelector('[data-customer-story]');
+
+if (customerStory) {
+  const storyTabs = [...customerStory.querySelectorAll('[data-story-tab]')];
+  const storyQuote = customerStory.querySelector('[data-story-quote]');
+  const storyName = customerStory.querySelector('[data-story-name]');
+  const storyRole = customerStory.querySelector('[data-story-role]');
+  const storyImage = customerStory.querySelector('[data-story-image]');
+
+  const showStory = (tab) => {
+    storyTabs.forEach((item) => {
+      const selected = item === tab;
+      item.classList.toggle('is-active', selected);
+      item.setAttribute('aria-selected', String(selected));
+    });
+    storyQuote.textContent = `“${tab.dataset.quote}”`;
+    storyName.textContent = tab.dataset.name;
+    storyRole.textContent = tab.dataset.role;
+    storyImage.src = tab.dataset.image;
+  };
+
+  storyTabs.forEach((tab) => tab.addEventListener('click', () => showStory(tab)));
+}
+
 const form = document.querySelector('.lead-form');
 
 if (form) {
