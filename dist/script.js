@@ -66,10 +66,14 @@ if (customerStory) {
       item.classList.toggle('is-active', selected);
       item.setAttribute('aria-selected', String(selected));
     });
-    storyQuote.textContent = `“${tab.dataset.quote}”`;
-    storyName.textContent = tab.dataset.name;
-    storyRole.textContent = tab.dataset.role;
-    storyImage.src = tab.dataset.image;
+    customerStory.classList.add('is-switching');
+    window.setTimeout(() => {
+      storyQuote.textContent = `“${tab.dataset.quote}”`;
+      storyName.textContent = tab.dataset.name;
+      storyRole.textContent = tab.dataset.role;
+      storyImage.src = tab.dataset.image;
+      customerStory.classList.remove('is-switching');
+    }, 180);
   };
 
   storyTabs.forEach((tab) => tab.addEventListener('click', () => showStory(tab)));
