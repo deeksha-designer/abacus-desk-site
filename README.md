@@ -1,5 +1,5 @@
-# Sharp Coating — International Partnerships
+# Abacus Desk — website concept
 
-Responsive one-page site for Sharp Coating's distributor and export partnership programme.
+Premium responsive website concept for Abacus Desk, using the company’s official brand mark, public content and original portfolio imagery.
 
-Open `index.html` directly or deploy to Vercel as a static site.
+The deployable static site is in `dist/`.

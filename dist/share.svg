@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f4ed"/>
+  <rect x="72" y="72" width="56" height="56" rx="10" fill="#113f34"/>
+  <path d="M84 88h32M84 100h32M84 112h32" stroke="#f6f4ed" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="94" cy="88" r="4" fill="#f2ad49"/><circle cx="106" cy="100" r="4" fill="#f2ad49"/><circle cx="91" cy="112" r="4" fill="#f2ad49"/>
+  <text x="150" y="116" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#151816">Abacus Desk</text>
+  <text x="72" y="295" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#151816">Qualified leads for</text>
+  <text x="72" y="382" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#151816">your sales team.</text>
+  <text x="72" y="474" font-family="Arial, sans-serif" font-size="28" fill="#5b625e">Lead generation and lead management, together.</text>
+</svg>
