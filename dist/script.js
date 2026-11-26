@@ -58,6 +58,7 @@ if (customerStory) {
   const storyQuote = customerStory.querySelector('[data-story-quote]');
   const storyName = customerStory.querySelector('[data-story-name]');
   const storyRole = customerStory.querySelector('[data-story-role]');
+  const storyLabel = customerStory.querySelector('.customer-story__label');
   const storyImage = customerStory.querySelector('[data-story-image]');
 
   const showStory = (tab) => {
@@ -71,7 +72,9 @@ if (customerStory) {
       storyQuote.textContent = `“${tab.dataset.quote}”`;
       storyName.textContent = tab.dataset.name;
       storyRole.textContent = tab.dataset.role;
+      storyLabel.textContent = tab.dataset.label;
       storyImage.src = tab.dataset.image;
+      storyImage.alt = tab.dataset.alt;
       customerStory.classList.remove('is-switching');
     }, 180);
   };
