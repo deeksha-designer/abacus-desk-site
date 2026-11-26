@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css?v=people-editorial-1">
 </head>
 <body>
@@ -29,15 +30,24 @@
         <span>Abacus Desk</span>
       </a>
       <nav class="nav__links" aria-label="Main navigation">
-        <a href="#service">Service</a>
-        <a href="#process">Process</a>
-        <a href="#results">Results</a>
+        <button class="nav-dropdown-trigger" type="button" data-nav-menu="services" aria-expanded="false">Service <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <button class="nav-dropdown-trigger" type="button" data-nav-menu="process" aria-expanded="false">Process <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <button class="nav-dropdown-trigger" type="button" data-nav-menu="results" aria-expanded="false">Results <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
         <a href="#fit">Who it is for</a>
       </nav>
-      <a class="btn btn--primary nav__action" href="#request">Request my lead plan <span aria-hidden="true">↗</span></a>
+      <a class="btn btn--primary nav__action" href="#request">Request my lead plan <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span>
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
+    </div>
+    <div class="nav-mega" data-nav-dropdown="services" hidden>
+      <div class="wrap nav-mega__inner"><div class="nav-mega__intro"><span>Abacus Desk services</span><strong>Practical digital support for growth-minded teams.</strong></div><div class="nav-mega__links"><a href="#service"><i class="fa-solid fa-bullseye"></i><span>Lead generation<small>Audience, campaigns and qualification</small></span></a><a href="#workspace"><i class="fa-solid fa-table-columns"></i><span>Lead management<small>One shared follow-up workspace</small></span></a><a href="#results"><i class="fa-solid fa-chart-line"></i><span>Digital marketing<small>Relevant work and outcomes</small></span></a></div></div>
+    </div>
+    <div class="nav-mega" data-nav-dropdown="process" hidden>
+      <div class="wrap nav-mega__inner"><div class="nav-mega__intro"><span>How we work</span><strong>A defined route from business brief to sales handoff.</strong></div><div class="nav-mega__links"><a href="#process"><i class="fa-solid fa-clipboard-check"></i><span>Campaign process<small>Five clear stages and shared decisions</small></span></a><a href="#fit"><i class="fa-solid fa-filter-circle-dollar"></i><span>Lead criteria<small>Agree what a useful enquiry means</small></span></a><a href="#request"><i class="fa-solid fa-comments"></i><span>Start a conversation<small>Tell us about your target market</small></span></a></div></div>
+    </div>
+    <div class="nav-mega" data-nav-dropdown="results" hidden>
+      <div class="wrap nav-mega__inner"><div class="nav-mega__intro"><span>Evidence, not noise</span><strong>See the work, client perspectives and reporting view.</strong></div><div class="nav-mega__links"><a href="#results"><i class="fa-solid fa-images"></i><span>Selected work<small>Projects from the Abacus Desk portfolio</small></span></a><a href="#results"><i class="fa-solid fa-quote-left"></i><span>Client perspectives<small>Words from long-standing clients</small></span></a><a href="#workspace"><i class="fa-solid fa-chart-column"></i><span>Included workspace<small>Visibility across every campaign</small></span></a></div></div>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
       <a href="#service">Service</a><a href="#process">Process</a><a href="#results">Results</a><a href="#workspace">Included software</a><a href="#fit">Who it is for</a><a href="#request">Request my lead plan</a>
@@ -79,7 +89,7 @@
             <span class="flow-pulse flow-pulse--three"></span>
           </div>
           <img src="assets/hero-indian-employee.png" alt="Indian professional using a laptop" width="941" height="1000">
-          <span class="portrait-ready"><i>✓</i><span><small>Campaign flow</small><strong>Ready for sales</strong></span></span>
+          <span class="portrait-ready"><i class="fa-solid fa-check" aria-hidden="true"></i><span><small>Campaign flow</small><strong>Ready for sales</strong></span></span>
         </div>
       </div>
     </section>
@@ -111,17 +121,17 @@
         <div class="problem-map" data-problem-accordion aria-label="Three connected campaign problems">
           <article class="problem-panel is-active" data-problem-panel tabindex="0" role="button" aria-expanded="true">
             <img class="problem-panel__photo" src="assets/problem-targeting.jpg" alt="" loading="lazy" decoding="async" data-source="stand-in" data-subject="A team reviewing audience data and campaign charts">
-            <span class="problem-map__node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="5"/></svg></span>
+            <span class="problem-map__node" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></span>
             <div class="problem-panel__copy"><small>01 · Targeting</small><h3>Wrong-fit enquiries</h3><p>We agree the customer profile and lead criteria before the campaign starts.</p></div>
           </article>
           <article class="problem-panel" data-problem-panel tabindex="0" role="button" aria-expanded="false">
             <img class="problem-panel__photo" src="assets/problem-visibility.jpg" alt="" loading="lazy" decoding="async" data-source="stand-in" data-subject="A campaign dashboard showing lead source charts">
-            <span class="problem-map__node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V7m0 11h16M7 14l4-4 3 2 5-6"/></svg></span>
+            <span class="problem-map__node" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
             <div class="problem-panel__copy"><small>02 · Visibility</small><h3>Unclear lead sources</h3><p>Campaign and lead information stays connected, so the useful sources are easier to see.</p></div>
           </article>
           <article class="problem-panel" data-problem-panel tabindex="0" role="button" aria-expanded="false">
             <img class="problem-panel__photo" src="assets/problem-follow-up.jpg" alt="" loading="lazy" decoding="async" data-source="stand-in" data-subject="A sales professional following up by phone at a laptop">
-            <span class="problem-map__node" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span>
+            <span class="problem-map__node" aria-hidden="true"><i class="fa-regular fa-clock"></i></span>
             <div class="problem-panel__copy"><small>03 · Follow-up</small><h3>Missed follow-ups</h3><p>Generated leads enter an included workspace where your team can track the next action.</p></div>
           </article>
         </div>
@@ -225,9 +235,9 @@
           <h2>A working partner, not another dashboard.</h2>
           <p>We explain the campaign in plain language, review lead quality with your team and make changes using the feedback you share.</p>
           <div class="human-points">
-            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"/></svg></span><span><strong>One clear point of contact</strong><small>Know who to speak to and what happens next.</small></span></div>
-            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v11H8l-4 3V6Z"/><path d="M8 10h8M8 13h5"/></svg></span><span><strong>Simple review conversations</strong><small>Useful feedback without complicated reports.</small></span></div>
-            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V8m7 11V4m7 15v-7"/></svg></span><span><strong>Decisions based on lead quality</strong><small>Improve targeting using what your sales team sees.</small></span></div>
+            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><i class="fa-solid fa-check"></i></span><span><strong>One clear point of contact</strong><small>Know who to speak to and what happens next.</small></span></div>
+            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><i class="fa-solid fa-comments"></i></span><span><strong>Simple review conversations</strong><small>Useful feedback without complicated reports.</small></span></div>
+            <div><span class="pointer-icon pointer-icon--solid" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></span><span><strong>Decisions based on lead quality</strong><small>Improve targeting using what your sales team sees.</small></span></div>
           </div>
         </div>
       </div>
@@ -344,6 +354,7 @@
 
         <div class="testimonial-head" data-reveal><div><h3>What clients say</h3></div><p>Long-standing relationships, described by the people who work with us.</p></div>
         <div class="testimonial-grid">
+          <figure class="testimonial-media"><img src="assets/brand/global-medikit.jpg" alt="A project delivered by Abacus Desk" loading="lazy"><figcaption><i class="fa-solid fa-handshake" aria-hidden="true"></i> Built on long-term partnerships</figcaption></figure>
           <blockquote data-reveal="left">
             <p>“Their response time is excellent and that helps us keep our down time to bare minimum, a critical need of our business.”</p>
             <footer><span class="quote-mark" aria-hidden="true">“</span><span><strong>Himanshu Mehrish</strong><small>IT Head · Mazars India</small></span></footer>
@@ -361,9 +372,10 @@
         <div class="fit__intro" data-reveal="left">
           <h2>A useful lead starts with clear criteria.</h2>
           <p>We do not use one definition for every business. The criteria are agreed before launch and written into the proposal.</p>
+          <figure class="fit__image"><img src="assets/brand/uflex.jpg" alt="A digital project from the Abacus Desk portfolio" loading="lazy"></figure>
         </div>
         <div class="criteria criteria--premium" data-reveal="right">
-          <div><span class="criteria__name">Customer fit</span><p>Industry, company type, size or other agreed business conditions.</p></div><div><span class="criteria__name">Buyer fit</span><p>The role or person involved in the buying decision.</p></div><div><span class="criteria__name">Geography</span><p>The cities, states or markets your team can serve.</p></div><div><span class="criteria__name">Lead validity</span><p>Required contact information, duplicate rules and review process.</p></div>
+          <div><span class="criteria__name"><i class="fa-solid fa-building" aria-hidden="true"></i>Customer fit</span><p>Industry, company type, size or other agreed business conditions.</p></div><div><span class="criteria__name"><i class="fa-solid fa-user-tie" aria-hidden="true"></i>Buyer fit</span><p>The role or person involved in the buying decision.</p></div><div><span class="criteria__name"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Geography</span><p>The cities, states or markets your team can serve.</p></div><div><span class="criteria__name"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Lead validity</span><p>Required contact information, duplicate rules and review process.</p></div>
         </div>
         <div class="industry-line">
           <span>Your industry</span>

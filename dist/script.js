@@ -1,5 +1,33 @@
 const menuButton = document.querySelector('.nav__toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
+const navTriggers = [...document.querySelectorAll('[data-nav-menu]')];
+const navDropdowns = [...document.querySelectorAll('[data-nav-dropdown]')];
+
+const closeNavDropdowns = () => {
+  navTriggers.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
+  navDropdowns.forEach((dropdown) => { dropdown.hidden = true; });
+};
+
+navTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const menuName = trigger.dataset.navMenu;
+    const dropdown = document.querySelector(`[data-nav-dropdown="${menuName}"]`);
+    const shouldOpen = trigger.getAttribute('aria-expanded') !== 'true';
+    closeNavDropdowns();
+    if (shouldOpen && dropdown) {
+      trigger.setAttribute('aria-expanded', 'true');
+      dropdown.hidden = false;
+    }
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.nav')) closeNavDropdowns();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeNavDropdowns();
+});
 
 if (menuButton && mobileMenu) {
   const closeMenu = () => {
@@ -9,6 +37,7 @@ if (menuButton && mobileMenu) {
   };
 
   menuButton.addEventListener('click', () => {
+    closeNavDropdowns();
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     if (open) {
       closeMenu();
