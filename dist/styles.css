@@ -659,6 +659,8 @@ p { color: var(--muted); }
   [data-reveal="left"], [data-reveal="right"] { transform: translateY(24px); }
 }
 
+.funnel-stage:hover, .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
+
 /* HubSpot-inspired color system: color-only overrides */
 .nav { background: rgba(255,248,246,.98); }
 .btn { border-color: var(--amber); }
@@ -884,3 +886,4 @@ p { color: var(--muted); }
   .client-story { width: 82%; flex-basis: 82%; margin-inline: 2%; padding: 16px; }
   .client-story > div { min-height: 210px; }
 }
+.funnel-stage:hover, .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
