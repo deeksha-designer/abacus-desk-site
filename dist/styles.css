@@ -725,11 +725,12 @@ p { color: var(--muted); }
 .problem-map { background: #1f1f1f; }
 .process-card footer i { width: 46px; height: 46px; display: grid; flex: 0 0 auto; place-items: center; border-radius: 50%; font-size: 20px; font-style: normal; transition: transform .25s ease, background .25s ease, color .25s ease; }
 .pipeline-step { background: #292929; color: #ffffff; }
-.pipeline-step:hover, .pipeline-step.is-active { border-color: #ff4800; background: #3a3a3a; }
+.pipeline-step:hover, .pipeline-step.is-active { border-color: #db3e00; background: #3a3a3a; }
 .pipeline-step i { color: #ffffff; }
 .funnel-stage { background: #292929; color: #ffffff; border-radius: 14px; }
 .funnel-stage--four, .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
 .funnel-tag, .funnel-tag::after { background: #444444; color: #ffffff; }
+.funnel-stage.is-active { background: #ff4800; box-shadow: 0 12px 28px rgba(245,124,18,.16); transform: none; }
 .problems, .people, .pipeline, .request, .problem-map, .case-card__art--green { background: #1f1f1f; }
 .problem-panel::before, .problem-panel.is-active::before { background: rgba(31,31,31,.78); }
 .problems .problem-map { border-left: 0; }
