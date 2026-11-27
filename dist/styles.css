@@ -771,7 +771,7 @@ p { color: var(--muted); }
 .client-stories { padding-block: clamp(58px, 6vw, 82px); }
 .client-carousel { grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 10px; }
 .client-carousel__viewport { padding: 22px 0; }
-.client-story { width: 27.5%; flex-basis: 27.5%; margin-inline: 1.25%; padding: 20px; border-radius: 18px; }
+.client-story { width: 31.333%; flex-basis: 31.333%; margin-inline: 1%; padding: 20px; border-radius: 18px; }
 .client-story.is-active { transform: scale(1.045); }
 .client-story img { aspect-ratio: 1 / 1; border-radius: 12px; }
 .client-story > div { min-height: 220px; padding: 22px 6px 4px; align-items: center; text-align: center; }
