@@ -719,6 +719,17 @@ p { color: var(--muted); }
 .human-points .pointer-icon--solid, .human-points > div:nth-child(2) .pointer-icon--solid { border-color: var(--white); background: var(--white); color: #ff4800; }
 .process-stack > li:nth-child(odd) .process-card { --card-bg: #ff4800; --card-ink: #1f1f1f; }
 .process-stack > li:nth-child(even) .process-card { --card-bg: #1f1f1f; --card-ink: #ffffff; }
+
+/* HubSpot charcoal section backgrounds and restored lead-criteria treatment */
+.problems, .people, .pipeline, .request { background: #1f1f1f; }
+.problem-map { background: #1f1f1f; }
+.process-card footer i { width: 46px; height: 46px; display: grid; flex: 0 0 auto; place-items: center; border-radius: 50%; font-size: 20px; font-style: normal; transition: transform .25s ease, background .25s ease, color .25s ease; }
+.pipeline-step { background: #292929; color: #ffffff; }
+.pipeline-step:hover, .pipeline-step.is-active { border-color: #ff4800; background: #3a3a3a; }
+.pipeline-step i { color: #ffffff; }
+.funnel-stage { background: #292929; color: #ffffff; border-radius: 14px; }
+.funnel-stage--four, .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
+.funnel-tag, .funnel-tag::after { background: #444444; color: #ffffff; }
 .process-stack > li:nth-child(odd) .process-card footer i { background: #1f1f1f; color: #ff4800; }
 .process-stack > li:nth-child(even) .process-card footer i { background: #ff4800; color: #1f1f1f; }
 
