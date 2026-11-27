@@ -1,14 +1,14 @@
 :root {
-  --paper: #f6f4ed;
-  --paper-2: #ece9df;
-  --ink: #151816;
-  --muted: #59605c;
-  --line: rgba(21, 24, 22, .16);
-  --green: #113f34;
-  --green-2: #0a2e27;
-  --lime: #cbe86b;
-  --amber: #f2ad49;
-  --white: #fffef9;
+  --paper: #fff8f6;
+  --paper-2: #fff0ec;
+  --ink: #213343;
+  --muted: #516f80;
+  --line: rgba(33, 51, 67, .16);
+  --green: #33475b;
+  --green-2: #2d3e50;
+  --lime: #ffede8;
+  --amber: #ff5c35;
+  --white: #ffffff;
   --nav: 72px;
   --gut: clamp(24px, 5.55vw, 80px);
   --wrap: 1280px;
@@ -658,6 +658,29 @@ p { color: var(--muted); }
   .testimonial-grid blockquote > p { min-height: 0; }
   [data-reveal="left"], [data-reveal="right"] { transform: translateY(24px); }
 }
+
+/* HubSpot-inspired color system: color-only overrides */
+.nav { background: rgba(255,248,246,.98); }
+.btn { border-color: var(--amber); }
+.btn--primary, .btn--primary:hover { background: var(--amber); border-color: var(--amber); color: var(--white); }
+.btn--outline, .btn--outline:hover { border-color: var(--amber); color: var(--amber); }
+.btn--outline:hover { background: var(--amber); color: var(--white); }
+.hero-glass__shape--sage { background: rgba(255,92,53,.12); }
+.hero-glass__shape--amber { background: rgba(255,188,150,.5); box-shadow: 0 24px 64px rgba(255,92,53,.18), inset 0 1px 0 rgba(255,255,255,.56); }
+.hero-glass__shape--teal { background: rgba(51,71,91,.12); }
+.eyebrow { border-color: rgba(255,92,53,.2); background: rgba(255,92,53,.1); color: var(--amber); }
+.process-card--amber, .process-card--lime { --card-bg: #ffede8; --card-ink: #213343; }
+.process-card--green, .process-card--deep { --card-bg: #33475b; --card-ink: #ffffff; }
+.client-stories { background: linear-gradient(115deg, #fff0ec 0%, #ffbc96 100%); }
+.request { background: #33475b; }
+.closing, .pipeline { background: #213343; }
+.case-card__art--green { background: #33475b; }
+.case-card__art--amber { background: #ffbc96; }
+.pipeline-step:hover, .pipeline-step.is-active { border-color: rgba(255,92,53,.75); }
+.pipeline-step i, .funnel-stage--four, .funnel-stage.is-active { color: #ffffff; }
+.funnel-stage--four, .funnel-stage.is-active { background: var(--amber); }
+.funnel-tag, .funnel-tag::after { background: #516f80; }
+.callbox-footer__nav strong { color: var(--amber); }
 
 /* Requested carousel, funnel and Callbox-style footer refinements */
 .client-stories__head { max-width: 760px; margin: 0 0 30px; text-align: left; }
