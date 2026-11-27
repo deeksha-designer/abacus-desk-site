@@ -4,8 +4,8 @@
   --ink: #1f1f1f;
   --muted: #4b4b4b;
   --line: rgba(31, 31, 31, .16);
-  --green: #124548;
-  --green-2: #042729;
+  --green: #1f1f1f;
+  --green-2: #1f1f1f;
   --lime: #fcded2;
   --amber: #ff4800;
   --white: #ffffff;
@@ -730,6 +730,8 @@ p { color: var(--muted); }
 .funnel-stage { background: #292929; color: #ffffff; border-radius: 14px; }
 .funnel-stage--four, .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
 .funnel-tag, .funnel-tag::after { background: #444444; color: #ffffff; }
+.problems, .people, .pipeline, .request, .problem-map, .case-card__art--green { background: #1f1f1f; }
+.problem-panel::before, .problem-panel.is-active::before { background: rgba(31,31,31,.78); }
 .process-stack > li:nth-child(odd) .process-card footer i { background: #1f1f1f; color: #ff4800; }
 .process-stack > li:nth-child(even) .process-card footer i { background: #ff4800; color: #1f1f1f; }
 
