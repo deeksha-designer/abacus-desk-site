@@ -661,6 +661,7 @@ p { color: var(--muted); }
 
 .funnel-stage:not(.is-active), .funnel-stage:not(.is-active):hover { background: #292929; color: #ffffff; }
 .funnel-stage.is-active { background: #ff4800; color: #ffffff; }
+[data-pipeline-tab="3"], [data-funnel-stage="3"] { cursor: pointer; }
 
 /* HubSpot-inspired color system: color-only overrides */
 .nav { background: rgba(255,248,246,.98); }
