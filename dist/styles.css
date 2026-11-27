@@ -682,6 +682,36 @@ p { color: var(--muted); }
 .funnel-tag, .funnel-tag::after { background: #4b4b4b; }
 .callbox-footer__nav strong { color: var(--amber); }
 
+/* Final HubSpot palette normalization: color-only */
+.btn--primary, .btn--primary:hover, .btn--outline:hover { background: #ff4800; border-color: #ff4800; }
+.btn--outline { color: #ff4800; border-color: #ff4800; }
+.story-state i, .story-track__dot::after { background: #ff4800; }
+.story-brief__tag, .ui-pill--live, .ui-status--ready { background: #fcded2; color: #1f1f1f; }
+.problems, .people, .request, .closing, .pipeline { background: #1f1f1f; }
+.problem-map { background: #1f1f1f; }
+.problem-panel::before, .problem-panel.is-active::before { background: rgba(31,31,31,.78); }
+.problem-map small { color: #ff4800; }
+.people__copy::before, .problems__note::before { background-color: #ff4800; }
+.ad-tile--metric { background: #f6f9fc; color: #1f1f1f; }
+.ad-tile--photo { background: linear-gradient(150deg, rgba(31,31,31,.08), rgba(31,31,31,.78)), #f8f5ee; }
+.ad-photo-shape { background: linear-gradient(150deg,#fcded2 0 28%,#f6f9fc 28% 52%,#124548 52%); }
+.ad-tile--grid { background-color: #f8f5ee; background-image: linear-gradient(rgba(31,31,31,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(31,31,31,.09) 1px,transparent 1px); }
+.ad-tile--dark { background: #1f1f1f; }
+.ad-tile--rings { background: #f6f9fc; color: #1f1f1f; }
+.ad-tile--peach { background: #fcded2; color: #1f1f1f; }
+.process-card--amber, .process-card--lime { --card-bg: #f8f5ee; --card-ink: #1f1f1f; }
+.process-card--green, .process-card--deep { --card-bg: #fcded2; --card-ink: #1f1f1f; }
+.ui-avatar { background: #f6f9fc; color: #1f1f1f; }
+.case-card__art--green { background: #124548; }
+.case-card__art--amber { background: #fcded2; }
+.case-card__draft { color: #ff4800; }
+.pipeline-step, .funnel-stage, .funnel-stage--four, .funnel-stage--four.is-active { background: #f6f9fc; color: #1f1f1f; }
+.pipeline-step:hover, .pipeline-step.is-active { background: #fcded2; border-color: #ff4800; }
+.funnel-stage--four, .funnel-stage.is-active { background: #ff4800; color: #ffffff; box-shadow: 0 12px 28px rgba(255,72,0,.16); }
+.funnel-tag, .funnel-tag::after { background: #1f1f1f; }
+.field input[aria-invalid="true"] { border-color: #ff4800; }
+.field__error { color: #b42318; }
+
 /* Requested carousel, funnel and Callbox-style footer refinements */
 .client-stories__head { max-width: 760px; margin: 0 0 30px; text-align: left; }
 .client-stories { padding-block: clamp(52px,5vw,68px); }
