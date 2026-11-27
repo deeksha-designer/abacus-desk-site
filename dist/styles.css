@@ -766,3 +766,21 @@ p { color: var(--muted); }
   .process__intro, .process-stack > li { position: static; }
   .creative-column { transform: none !important; }
 }
+
+/* Testimonial carousel reference refinements */
+.client-stories { padding-block: clamp(58px, 6vw, 82px); }
+.client-carousel { grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 10px; }
+.client-carousel__viewport { padding: 22px 0; }
+.client-story { width: 27.5%; flex-basis: 27.5%; margin-inline: 1.25%; padding: 20px; border-radius: 18px; }
+.client-story.is-active { transform: scale(1.045); }
+.client-story img { aspect-ratio: 1 / 1; border-radius: 12px; }
+.client-story > div { min-height: 220px; padding: 22px 6px 4px; align-items: center; text-align: center; }
+.client-story p { max-width: 290px; margin: 0 auto 20px; font-size: clamp(14px, 1.05vw, 17px); line-height: 1.45; }
+.client-story strong, .client-story small { display: block; width: 100%; text-align: center; }
+.client-story strong { font-size: 15px; }
+.client-story small { font-size: 12px; }
+@media (max-width: 767px) {
+  .client-carousel { grid-template-columns: 40px minmax(0, 1fr) 40px; gap: 4px; }
+  .client-story { width: 82%; flex-basis: 82%; margin-inline: 2%; padding: 16px; }
+  .client-story > div { min-height: 210px; }
+}
