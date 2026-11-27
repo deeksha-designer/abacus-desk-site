@@ -1,33 +1,5 @@
 const menuButton = document.querySelector('.nav__toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
-const navTriggers = [...document.querySelectorAll('[data-nav-menu]')];
-const navDropdowns = [...document.querySelectorAll('[data-nav-dropdown]')];
-
-const closeNavDropdowns = () => {
-  navTriggers.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
-  navDropdowns.forEach((dropdown) => { dropdown.hidden = true; });
-};
-
-navTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', () => {
-    const menuName = trigger.dataset.navMenu;
-    const dropdown = document.querySelector(`[data-nav-dropdown="${menuName}"]`);
-    const shouldOpen = trigger.getAttribute('aria-expanded') !== 'true';
-    closeNavDropdowns();
-    if (shouldOpen && dropdown) {
-      trigger.setAttribute('aria-expanded', 'true');
-      dropdown.hidden = false;
-    }
-  });
-});
-
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.nav')) closeNavDropdowns();
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeNavDropdowns();
-});
 
 if (menuButton && mobileMenu) {
   const closeMenu = () => {
@@ -37,7 +9,6 @@ if (menuButton && mobileMenu) {
   };
 
   menuButton.addEventListener('click', () => {
-    closeNavDropdowns();
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     if (open) {
       closeMenu();
@@ -49,37 +20,6 @@ if (menuButton && mobileMenu) {
   });
 
   mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-}
-
-const customerStory = document.querySelector('[data-customer-story]');
-
-if (customerStory) {
-  const storyTabs = [...customerStory.querySelectorAll('[data-story-tab]')];
-  const storyQuote = customerStory.querySelector('[data-story-quote]');
-  const storyName = customerStory.querySelector('[data-story-name]');
-  const storyRole = customerStory.querySelector('[data-story-role]');
-  const storyLabel = customerStory.querySelector('.customer-story__label');
-  const storyImage = customerStory.querySelector('[data-story-image]');
-
-  const showStory = (tab) => {
-    storyTabs.forEach((item) => {
-      const selected = item === tab;
-      item.classList.toggle('is-active', selected);
-      item.setAttribute('aria-selected', String(selected));
-    });
-    customerStory.classList.add('is-switching');
-    window.setTimeout(() => {
-      storyQuote.textContent = `“${tab.dataset.quote}”`;
-      storyName.textContent = tab.dataset.name;
-      storyRole.textContent = tab.dataset.role;
-      storyLabel.textContent = tab.dataset.label;
-      storyImage.src = tab.dataset.image;
-      storyImage.alt = tab.dataset.alt;
-      customerStory.classList.remove('is-switching');
-    }, 180);
-  };
-
-  storyTabs.forEach((tab) => tab.addEventListener('click', () => showStory(tab)));
 }
 
 const form = document.querySelector('.lead-form');
@@ -301,3 +241,70 @@ if (workspace) {
   showPanel(0);
   startCycle();
 }
+
+const clientCarousel = document.querySelector('[data-client-carousel]');
+if (clientCarousel) {
+  const track = clientCarousel.querySelector('.client-carousel__track');
+  const originals = [...clientCarousel.querySelectorAll('[data-client-slide]')];
+  const prev = clientCarousel.querySelector('.client-carousel__arrow--prev');
+  const next = clientCarousel.querySelector('.client-carousel__arrow--next');
+  const cloneCount = Math.min(2, originals.length);
+  if (track && cloneCount) {
+    originals.slice(-cloneCount).reverse().forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.insertBefore(clone, track.firstChild);
+    });
+    originals.slice(0, cloneCount).forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.append(clone);
+    });
+  }
+  const slides = [...track.querySelectorAll('[data-client-slide]')];
+  let active = cloneCount;
+  let timer;
+  let moving = false;
+
+  const render = (animate = true) => {
+    const viewport = clientCarousel.querySelector('.client-carousel__viewport');
+    const slide = slides[active];
+    if (!viewport || !slide || !track) return;
+    track.style.transition = animate ? '' : 'none';
+    const offset = slide.offsetLeft - (viewport.clientWidth - slide.offsetWidth) / 2;
+    track.style.transform = `translateX(${-offset}px)`;
+    slides.forEach((item, index) => item.classList.toggle('is-active', index === active));
+    if (!animate) requestAnimationFrame(() => { track.style.transition = ''; });
+  };
+  const show = (index) => { if (moving) return; moving = true; active = index; render(); };
+  const start = () => { window.clearInterval(timer); if (!reduceMotion) timer = window.setInterval(() => show(active + 1), 4800); };
+  prev?.addEventListener('click', () => { show(active - 1); start(); });
+  next?.addEventListener('click', () => { show(active + 1); start(); });
+  track?.addEventListener('transitionend', () => {
+    if (active >= originals.length + cloneCount) { active = cloneCount; render(false); }
+    if (active < cloneCount) { active = originals.length + cloneCount - 1; render(false); }
+    moving = false;
+  });
+  clientCarousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+  clientCarousel.addEventListener('mouseleave', start);
+  window.addEventListener('resize', () => render(false));
+  render(false); start();
+}
+
+const pipelineTabs = document.querySelector('[data-pipeline-tabs]');
+if (pipelineTabs) {
+  const tabs = [...pipelineTabs.querySelectorAll('[data-pipeline-tab]')];
+  const stages = [...document.querySelectorAll('[data-funnel-stage]')];
+  tabs.forEach((tab, index) => tab.addEventListener('click', () => {
+    tabs.forEach((item) => item.classList.toggle('is-active', item === tab));
+    stages.forEach((stage) => stage.classList.toggle('is-active', Number(stage.dataset.funnelStage) === index));
+  }));
+  stages.forEach((stage) => stage.addEventListener('click', () => {
+    const index = Number(stage.dataset.funnelStage);
+    const tab = tabs[index];
+    if (!tab) return;
+    tabs.forEach((item) => item.classList.toggle('is-active', item === tab));
+    stages.forEach((item) => item.classList.toggle('is-active', item === stage));
+  }));
+}
+

@@ -16,7 +16,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css?v=people-editorial-1">
 </head>
@@ -26,28 +26,18 @@
     <div class="wrap nav__inner">
       <a class="skip-link" href="#top">Skip to content</a>
       <a class="brand" href="#top" aria-label="Abacus Desk home">
-        <img class="brand__logo" src="assets/brand/abacus-logo.png" alt="Abacus Desk">
-        <span>Abacus Desk</span>
+        <img class="brand__logo" src="assets/abacus-logo.png" alt="Abacus Desk">
       </a>
       <nav class="nav__links" aria-label="Main navigation">
-        <button class="nav-dropdown-trigger" type="button" data-nav-menu="services" aria-expanded="false">Service <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-        <button class="nav-dropdown-trigger" type="button" data-nav-menu="process" aria-expanded="false">Process <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-        <button class="nav-dropdown-trigger" type="button" data-nav-menu="results" aria-expanded="false">Results <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <a href="#service">Service</a>
+        <a href="#process">Process</a>
+        <a href="#results">Results</a>
         <a href="#fit">Who it is for</a>
       </nav>
-      <a class="btn nav__action" href="#request">Request my lead plan</a>
+      <a class="btn btn--primary nav__action" href="#request">Request my lead plan <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <span></span><span></span>
       </button>
-    </div>
-    <div class="nav-mega" data-nav-dropdown="services" hidden>
-      <div class="nav-mega__inner"><div class="nav-mega__intro"><span>Services</span><h3>Digital support that stays connected to sales.</h3><p>Plan the audience, run the campaign and keep every generated lead visible to the people following up.</p><div><a class="nav-mega__text-link" href="#service">Explore services</a><a class="btn nav-mega__cta" href="#request">Discuss your brief</a></div></div><div class="nav-mega__columns"><div><strong>Campaign services</strong><a href="#service">Lead generation</a><a href="#process">Campaign planning</a><a href="#fit">Lead qualification</a></div><div><strong>Digital support</strong><a href="#results">Digital marketing</a><a href="#results">Creative execution</a><a href="#workspace">Lead management</a></div></div><a class="nav-mega__feature" href="#results"><img src="assets/brand/global-medikit.jpg" alt="Global Medikit project by Abacus Desk"><span><strong>Selected client work</strong><small>See how strategy and execution come together.</small></span></a></div>
-    </div>
-    <div class="nav-mega" data-nav-dropdown="process" hidden>
-      <div class="nav-mega__inner"><div class="nav-mega__intro"><span>Process</span><h3>A clear route from business brief to sales handoff.</h3><p>Every campaign starts with agreed criteria and moves through visible, reviewable stages.</p><div><a class="nav-mega__text-link" href="#process">View the process</a><a class="btn nav-mega__cta" href="#request">Start a conversation</a></div></div><div class="nav-mega__columns"><div><strong>Plan</strong><a href="#process">Understand the brief</a><a href="#fit">Define a useful lead</a><a href="#process">Approve the campaign</a></div><div><strong>Run and review</strong><a href="#process">Launch outreach</a><a href="#workspace">Manage follow-up</a><a href="#results">Review the work</a></div></div><a class="nav-mega__feature" href="#process"><img src="assets/problem-targeting.jpg" alt="Team reviewing campaign targeting"><span><strong>Five clear stages</strong><small>Shared decisions keep the work practical.</small></span></a></div>
-    </div>
-    <div class="nav-mega" data-nav-dropdown="results" hidden>
-      <div class="nav-mega__inner"><div class="nav-mega__intro"><span>Results</span><h3>Real work, client perspectives and visible progress.</h3><p>Review selected Abacus Desk projects and see how campaign information reaches the follow-up team.</p><div><a class="nav-mega__text-link" href="#results">Explore selected work</a><a class="btn nav-mega__cta" href="#workspace">See the workspace</a></div></div><div class="nav-mega__columns"><div><strong>Evidence</strong><a href="#results">Campaign framework</a><a href="#results">Portfolio projects</a><a href="#results">Client perspectives</a></div><div><strong>Visibility</strong><a href="#workspace">Lead sources</a><a href="#workspace">Follow-up status</a><a href="#commercial">Commercial terms</a></div></div><a class="nav-mega__feature" href="#results"><img src="assets/brand/sadhu-forging.jpg" alt="Sadhu Forgings project by Abacus Desk"><span><strong>Abacus Desk portfolio</strong><small>Work across healthcare, industry and mobility.</small></span></a></div>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
       <a href="#service">Service</a><a href="#process">Process</a><a href="#results">Results</a><a href="#workspace">Included software</a><a href="#fit">Who it is for</a><a href="#request">Request my lead plan</a>
@@ -64,12 +54,12 @@
       </div>
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="section-label">Lead generation for Indian businesses</p>
+          <p class="eyebrow">Lead generation for Indian businesses</p>
           <h1>Qualified leads for your sales team.</h1>
           <p class="hero__lead">Tell us who you want to reach. We plan and run the campaign, agree what makes a lead relevant, and deliver it into lead management software included with the service.</p>
           <div class="hero__actions">
-            <a class="btn" href="#request">Request my lead plan</a>
-            <a class="link" href="#process">See the process <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--primary btn--large" href="#request">Request my lead plan <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a class="link" href="#process">See the process <span aria-hidden="true"><i class="fa-solid fa-arrow-down"></i></span></a>
           </div>
           <p class="hero__fact">One service from targeting to follow-up visibility.</p>
         </div>
@@ -94,16 +84,15 @@
       </div>
     </section>
 
-    <section class="logo-preview" aria-label="Abacus Desk client logo reel" data-reveal>
+    <section class="logo-preview" aria-label="Sample client logo reel" data-reveal>
       <div class="wrap logo-preview__inner">
-        <p>Trusted by teams across healthcare, manufacturing, technology and infrastructure</p>
         <div class="logo-marquee" aria-label="Abacus Desk clients">
           <div class="logo-marquee__track">
             <div class="logo-row">
-              <span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/01-asian.png" alt="Asian Institute of Medical Sciences"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/05-kmg.png" alt="KMG"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/06-tricolite.png" alt="Tricolite"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/04-microtek.png" alt="Microtek"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/02-polymed.png" alt="Poly Medicure"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/08-jaipur-golden.png" alt="Jaipur Golden Hospital"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/03-okaya.png" alt="Okaya"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2022/03/delta.png" alt="Delta Electronics"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/11-ozone.png" alt="Ozone"></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2022/03/BCH-LOGO.png" alt="BCH Electric"></span>
+              <span><img src="assets/clients/asian.png" alt="Asian Institute of Medical Sciences"></span><span><img src="assets/clients/kmg.png" alt="KMG"></span><span><img src="assets/clients/tricolite.png" alt="Tricolite"></span><span><img src="assets/clients/microtek.png" alt="Microtek"></span><span><img src="assets/clients/polymed.png" alt="Poly Medicure"></span><span><img src="assets/clients/jaipur-golden.png" alt="Jaipur Golden Hospital"></span><span><img src="assets/clients/okaya.png" alt="Okaya"></span><span><img src="assets/clients/delta.png" alt="Delta Electronics"></span><span><img src="assets/clients/ozone.png" alt="Ozone"></span><span><img src="assets/clients/bch.png" alt="BCH Electric"></span>
             </div>
             <div class="logo-row" aria-hidden="true">
-              <span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/01-asian.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/05-kmg.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/06-tricolite.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/04-microtek.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/02-polymed.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/08-jaipur-golden.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/03-okaya.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2022/03/delta.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/11-ozone.png" alt=""></span><span><img src="https://www.abacusdesk.com/wp-content/uploads/2022/03/BCH-LOGO.png" alt=""></span>
+              <span><img src="assets/clients/asian.png" alt=""></span><span><img src="assets/clients/kmg.png" alt=""></span><span><img src="assets/clients/tricolite.png" alt=""></span><span><img src="assets/clients/microtek.png" alt=""></span><span><img src="assets/clients/polymed.png" alt=""></span><span><img src="assets/clients/jaipur-golden.png" alt=""></span><span><img src="assets/clients/okaya.png" alt=""></span><span><img src="assets/clients/delta.png" alt=""></span><span><img src="assets/clients/ozone.png" alt=""></span><span><img src="assets/clients/bch.png" alt=""></span>
             </div>
           </div>
         </div>
@@ -113,7 +102,7 @@
     <section class="section problems" id="service" style="--h:1">
       <div class="wrap problems__grid">
         <div class="problems__intro" data-reveal>
-          <p class="section-label">Where campaigns lose momentum</p>
+          <p class="eyebrow">Where campaigns lose momentum</p>
           <h2>More enquiries are not enough.</h2>
           <p>The right people must arrive, your team must know why they matter, and follow-up must happen on time.</p>
           <span class="problems__note">Three connected points need to work together.</span>
@@ -142,10 +131,10 @@
     <section class="section process" id="process" style="--h:1" data-moment="step-highlight">
       <div class="wrap process__grid">
         <div class="process__intro" data-reveal>
-          <p class="section-label">How the campaign works</p>
+          <p class="eyebrow">How the campaign works</p>
           <h2>Your brief becomes a working campaign.</h2>
           <p>Every step has a clear decision, owner and output. Scroll through the work from first brief to campaign review.</p>
-          <a class="btn" href="#request">Request my lead plan</a>
+          <a class="btn btn--outline" href="#request">Request my lead plan <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
 
         <ol class="process-stack" aria-label="Five campaign stages">
@@ -153,35 +142,35 @@
             <article class="process-card process-card--amber" data-reveal>
               <span class="process-card__tab" aria-hidden="true">Step 01</span>
               <div><h3>Share your business.</h3><p>Tell us what you sell, where you sell it and the customer you want to reach.</p></div>
-              <footer><span>Business brief</span><i aria-hidden="true">↓</i></footer>
+              <footer><span>Business brief</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></footer>
             </article>
           </li>
           <li style="--i:1">
             <article class="process-card process-card--green" data-reveal>
               <span class="process-card__tab" aria-hidden="true">Step 02</span>
               <div><h3>Agree on a good lead.</h3><p>We define fit, validity, geography and the information your team needs.</p></div>
-              <footer><span>Lead definition</span><i aria-hidden="true">↓</i></footer>
+              <footer><span>Lead definition</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></footer>
             </article>
           </li>
           <li style="--i:2">
             <article class="process-card process-card--lime" data-reveal>
               <span class="process-card__tab" aria-hidden="true">Step 03</span>
               <div><h3>Approve the campaign.</h3><p>We recommend the approach and explain the scope, cost and responsibilities in plain language.</p></div>
-              <footer><span>Campaign decision</span><i aria-hidden="true">↓</i></footer>
+              <footer><span>Campaign decision</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></footer>
             </article>
           </li>
           <li style="--i:3">
             <article class="process-card process-card--paper" data-reveal>
               <span class="process-card__tab" aria-hidden="true">Step 04</span>
               <div><h3>Receive and work leads.</h3><p>Qualified enquiries enter the included workspace with context, ownership and a clear next action.</p></div>
-              <footer><span>Sales handoff</span><i aria-hidden="true">↓</i></footer>
+              <footer><span>Sales handoff</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></footer>
             </article>
           </li>
           <li style="--i:4">
             <article class="process-card process-card--deep" data-reveal>
               <span class="process-card__tab" aria-hidden="true">Step 05</span>
               <div><h3>Review what works.</h3><p>Lead quality and sales feedback guide the next round of targeting, messaging and follow-up.</p></div>
-              <footer><span>Campaign learning</span><i aria-hidden="true">✓</i></footer>
+              <footer><span>Campaign learning</span><i class="fa-solid fa-check" aria-hidden="true"></i></footer>
             </article>
           </li>
         </ol>
@@ -190,38 +179,22 @@
 
     <section class="creative-work" id="work" aria-labelledby="work-title">
       <div class="wrap creative-work__head" data-reveal>
-        <p class="section-label">The work</p>
-        <h2 id="work-title">Digital work built around real businesses.</h2>
-        <p>Selected original projects from the Abacus Desk portfolio across healthcare, industry, mobility and consumer brands.</p>
-        <a class="btn" href="#request">Talk about your campaign</a>
+        <p class="eyebrow">The work</p>
+        <h2 id="work-title">Campaign creative, built for the people you want to reach.</h2>
+        <p>Clear messages, practical offers and focused visuals for Indian business audiences. These are sample concepts that show how campaign ideas can come to life.</p>
+        <a class="btn btn--primary" href="#request">Talk about your campaign <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
 
-      <div class="creative-wall" aria-label="A moving wall of Abacus Desk portfolio projects">
+      <div class="creative-wall" aria-label="A moving wall of square sample campaign creatives">
         <div class="creative-wall__columns" aria-hidden="true">
-          <div class="creative-column creative-column--up">
-            <article class="ad-tile work-tile"><img src="assets/brand/global-medikit.jpg" alt=""><span>Global Medikit</span></article><article class="ad-tile work-tile"><img src="assets/brand/autokoi.jpg" alt=""><span>Autokoi</span></article>
-          </div>
-          <div class="creative-column creative-column--down">
-            <article class="ad-tile work-tile"><img src="assets/brand/craftsmith.jpg" alt=""><span>Craftsmith</span></article><article class="ad-tile work-tile"><img src="assets/brand/uflex.jpg" alt=""><span>UFLEX</span></article>
-          </div>
-          <div class="creative-column creative-column--up creative-column--late">
-            <article class="ad-tile work-tile"><img src="assets/brand/viggo-medical.jpg" alt=""><span>Viggo Medical Devices</span></article><article class="ad-tile work-tile"><img src="assets/brand/sadhu-forging.jpg" alt=""><span>Sadhu Forgings</span></article>
-          </div>
-          <div class="creative-column creative-column--down creative-column--slow">
-            <article class="ad-tile work-tile"><img src="assets/brand/autokoi.jpg" alt=""><span>Autokoi</span></article><article class="ad-tile work-tile"><img src="assets/brand/global-medikit.jpg" alt=""><span>Global Medikit</span></article>
-          </div>
-          <div class="creative-column creative-column--up creative-column--slow">
-            <article class="ad-tile work-tile"><img src="assets/brand/uflex.jpg" alt=""><span>UFLEX</span></article><article class="ad-tile work-tile"><img src="assets/brand/craftsmith.jpg" alt=""><span>Craftsmith</span></article>
-          </div>
-          <div class="creative-column creative-column--down creative-column--late">
-            <article class="ad-tile work-tile"><img src="assets/brand/sadhu-forging.jpg" alt=""><span>Sadhu Forgings</span></article><article class="ad-tile work-tile"><img src="assets/brand/viggo-medical.jpg" alt=""><span>Viggo Medical Devices</span></article>
-          </div>
-          <div class="creative-column creative-column--up">
-            <article class="ad-tile work-tile"><img src="assets/brand/global-medikit.jpg" alt=""><span>Global Medikit</span></article><article class="ad-tile work-tile"><img src="assets/brand/uflex.jpg" alt=""><span>UFLEX</span></article>
-          </div>
-          <div class="creative-column creative-column--down creative-column--slow">
-            <article class="ad-tile work-tile"><img src="assets/brand/craftsmith.jpg" alt=""><span>Craftsmith</span></article><article class="ad-tile work-tile"><img src="assets/brand/autokoi.jpg" alt=""><span>Autokoi</span></article>
-          </div>
+          <div class="creative-column creative-column--up"><article class="ad-tile ad-tile--signal"><span class="ad-kicker">B2B demand</span><strong>Reach the people who decide.</strong><small>Qualified enquiries for your sales team</small><i>ABACUS DESK</i></article><article class="ad-tile ad-tile--paper"><span class="ad-number">01</span><strong>Right market.<br>Right message.</strong><small>Campaign planning made simple.</small></article></div>
+          <div class="creative-column creative-column--down"><article class="ad-tile ad-tile--amber"><span class="ad-kicker">For growing teams</span><strong>More useful conversations.</strong><small>Not just more form fills.</small><i class="ad-orbit"></i></article><article class="ad-tile ad-tile--metric"><span class="ad-kicker">Campaign pulse</span><strong>82%</strong><small>leads reviewed within one working day</small><i class="ad-chart"><b></b><b></b><b></b><b></b></i></article></div>
+          <div class="creative-column creative-column--up creative-column--late"><article class="ad-tile ad-tile--lime"><span class="ad-kicker">Mumbai · B2B</span><strong>Find buyers already looking.</strong><small>Clear targeting. Clear handoff.</small><i class="ad-cross"></i></article><article class="ad-tile ad-tile--photo"><span class="ad-photo-shape"></span><span class="ad-kicker">Your next market</span><strong>Start with a sharper brief.</strong><small>Built around your customer profile.</small></article></div>
+          <div class="creative-column creative-column--down creative-column--slow"><article class="ad-tile ad-tile--grid"><span class="ad-kicker">Lead quality</span><strong>Fit comes before volume.</strong><small>Role · company · location · need</small></article><article class="ad-tile ad-tile--dark"><span class="ad-kicker">Sales handoff</span><strong>A clear next step with every lead.</strong><small>Owner, context and status included.</small><i class="ad-arrow fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></article></div>
+          <div class="creative-column creative-column--up creative-column--slow"><article class="ad-tile ad-tile--rings"><span class="ad-kicker">Built to learn</span><strong>Every response improves the next round.</strong><small>Target · test · review</small></article><article class="ad-tile ad-tile--peach"><span class="ad-kicker">Campaign idea</span><strong>Make the offer easy to understand.</strong><small>Plain language for busy buyers.</small></article></div>
+          <div class="creative-column creative-column--down creative-column--late"><article class="ad-tile ad-tile--paper"><span class="ad-number">24h</span><strong>Fast follow-up starts with visibility.</strong><small>Keep every enquiry moving.</small></article><article class="ad-tile ad-tile--signal"><span class="ad-kicker">Lead generation</span><strong>One campaign. One working view.</strong><small>From source to sales action.</small><i>ABACUS DESK</i></article></div>
+          <div class="creative-column creative-column--up"><article class="ad-tile ad-tile--metric"><span class="ad-kicker">Weekly view</span><strong>36</strong><small>qualified enquiries ready for follow-up</small><i class="ad-chart"><b></b><b></b><b></b><b></b></i></article><article class="ad-tile ad-tile--lime"><span class="ad-kicker">India · B2B</span><strong>Turn interest into a clear action.</strong><small>Simple journeys convert better.</small><i class="ad-cross"></i></article></div>
+          <div class="creative-column creative-column--down creative-column--slow"><article class="ad-tile ad-tile--amber"><span class="ad-kicker">Campaign review</span><strong>See what deserves more budget.</strong><small>Decisions in plain language.</small><i class="ad-orbit"></i></article><article class="ad-tile ad-tile--dark"><span class="ad-kicker">Your audience</span><strong>Specific beats broad.</strong><small>Reach the roles that matter.</small><i class="ad-arrow">→</i></article></div>
         </div>
       </div>
     </section>
@@ -232,7 +205,7 @@
           <img src="https://images.pexels.com/photos/8069749/pexels-photo-8069749.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="A business team discussing documents together in an office" loading="lazy">
         </div>
         <div class="people__copy">
-          <p class="section-label">People stay in the loop</p>
+          <p class="eyebrow">People stay in the loop</p>
           <h2>A working partner, not another dashboard.</h2>
           <p>We explain the campaign in plain language, review lead quality with your team and make changes using the feedback you share.</p>
           <div class="human-points">
@@ -247,7 +220,7 @@
     <section class="section workspace" id="workspace" style="--h:1">
       <div class="wrap workspace__grid">
         <div class="workspace__copy" data-reveal="left">
-          <p class="section-label">Included lead management software</p>
+          <p class="eyebrow">Included lead management software</p>
           <h2>See what happens after every lead.</h2>
           <p>Lead generation clients get a workspace at no additional software cost. Your team can use it to keep lead details and follow-up status in one place. The exact tools available are confirmed in your proposal.</p>
           <ul class="plain-list">
@@ -298,9 +271,9 @@
                 <section class="workspace-panel" data-workspace-panel="2" aria-hidden="true">
                   <div class="workspace-panel__head"><div><small>Follow-ups dashboard</small><strong>Today’s actions</strong></div><span class="ui-pill">4 due</span></div>
                   <div class="followup-list">
-                    <article><time>10:30</time><span class="followup-icon" aria-hidden="true">↗</span><div><strong>Call Northstar</strong><small>Sales head · Qualified lead</small></div><span class="ui-owner">AK</span></article>
-                    <article><time>12:00</time><span class="followup-icon" aria-hidden="true">✉</span><div><strong>Send campaign note</strong><small>Axis Serve · Proposal context</small></div><span class="ui-owner">RM</span></article>
-                    <article><time>15:30</time><span class="followup-icon" aria-hidden="true">✓</span><div><strong>Review Metro Trade</strong><small>Growth lead · Contact check</small></div><span class="ui-owner">AK</span></article>
+                    <article><time>10:30</time><span class="followup-icon" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><div><strong>Call Northstar</strong><small>Sales head · Qualified lead</small></div><span class="ui-owner">AK</span></article>
+                    <article><time>12:00</time><span class="followup-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><div><strong>Send campaign note</strong><small>Axis Serve · Proposal context</small></div><span class="ui-owner">RM</span></article>
+                    <article><time>15:30</time><span class="followup-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span><div><strong>Review Metro Trade</strong><small>Growth lead · Contact check</small></div><span class="ui-owner">AK</span></article>
                   </div>
                   <div class="followup-summary"><span><small>Completed today</small><strong>6 actions</strong></span><span><small>Next due</small><strong>Tomorrow, 10:00</strong></span></div>
                 </section>
@@ -320,49 +293,55 @@
       </div>
     </section>
 
-    <section class="section results" id="results">
+    <section class="section client-stories" id="results" aria-labelledby="client-stories-title">
       <div class="wrap">
-        <div class="section-head" data-reveal>
-          <div>
-            <p class="section-label">Selected campaign framework</p>
-            <h2>The work. The process.</h2>
+        <div class="client-stories__head" data-reveal>
+          <p class="eyebrow">What clients say</p>
+          <h2 id="client-stories-title">Trusted by teams that expect more.</h2>
+        </div>
+        <div class="client-carousel" data-client-carousel>
+          <button class="client-carousel__arrow client-carousel__arrow--prev" type="button" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="client-carousel__viewport">
+            <div class="client-carousel__track">
+              <article class="client-story" data-client-slide><img src="assets/testimonials/viggo-medical.jpg" alt="Healthcare campaign project"><div><p>“Abacus Desk has helped streamline JGH's marketing efforts. Their teamwork and data-driven strategies have significantly boosted our outreach.”</p><strong>Dheeraj Shrivastav</strong><small>Head of Marketing · Jaipur Golden Hospital</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/autokoi.jpg" alt="Automotive technology project"><div><p>“Their response time is excellent and helps us keep downtime to a bare minimum, a critical need of our business.”</p><strong>Himanshu Mehrish</strong><small>IT Head · Mazars India</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/uflex.jpg" alt="Industrial campaign project"><div><p>“They take time to understand problems correctly, explain complex matters simply and reply promptly.”</p><strong>Pankaj Gupta</strong><small>GM (F&amp;A) and Company Secretary · Munjal Showa Limited</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/global-medikit.jpg" alt="Healthcare technology project"><div><p>“Abacus Desk responds quickly and has supplemented our IT needs with expertise and superior technology.”</p><strong>Shuvankar Pramanick</strong><small>HOD – Information Technology · Asian Institute of Medical Sciences</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/sadhu-forging.jpg" alt="Manufacturing project"><div><p>“They are proactive in identifying vulnerable areas and recommended changes that helped operations immensely.”</p><strong>Vikram Behl</strong><small>Behl Machinery · Belgium</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/seo-work.jpg" alt="Digital operations project"><div><p>“They are super quick to respond and resolution is fast and precise. The overall service is exceptionally good.”</p><strong>Mukesh Sharma</strong><small>Manager – Marketing · C&amp;S Electric Limited</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/craftsmith.jpg" alt="Brand and website project"><div><p>“They are a team of hard-working professionals and have raised the bar every time we hired them.”</p><strong>Steven Kleinberg</strong><small>COO · CardChoice International</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/viggo-medical.jpg" alt="Medical services project"><div><p>“They swung into action with lightning speed during a late-night breakdown and saved us a lot of hassle.”</p><strong>Harinder Bhatia</strong><small>AVP – Web Technology Group · KMG</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/uflex.jpg" alt="Product marketing project"><div><p>“Their writing expertise has woven a narrative around our brand that resonates with our customers.”</p><strong>Nitin Agarwal</strong><small>CEO · Prayag</small></div></article>
+              <article class="client-story" data-client-slide><img src="assets/testimonials/autokoi.jpg" alt="Performance marketing project"><div><p>“Their Meta and Google performance marketing strategies gave our brand an electrifying boost.”</p><strong>Karan Raj Aggarwal</strong><small>Founder · Pizzapro</small></div></article>
+            </div>
           </div>
-          <p>These are service facts, not performance promises. Campaign results depend on the offer, market, budget and sales follow-up.</p>
-        </div>
-        <div class="stat-grid results-cards">
-          <article data-reveal data-delay="0"><div class="result-card__meta"><span>Lead definition</span><span>Before launch</span></div><strong data-count="1">1</strong><span class="result-card__label">agreed definition of a good lead</span><h3>Start with one clear view of a useful lead.</h3><p>Customer fit, buyer role, geography and validity are agreed before launch.</p><a class="btn" href="#fit">See lead criteria</a></article>
-          <article data-reveal data-delay="80"><div class="result-card__meta"><span>Campaign process</span><span>Five stages</span></div><strong data-count="5">5</strong><span class="result-card__label">clear stages from brief to review</span><h3>A defined route from brief to campaign review.</h3><p>Planning, approval, launch, follow-up and review stay connected throughout the work.</p><a class="btn" href="#process">View the process</a></article>
-          <article data-reveal data-delay="160"><div class="result-card__meta"><span>Lead management</span><span>Included</span></div><strong>Included</strong><span class="result-card__label">lead management workspace</span><h3>Every generated lead has a visible next action.</h3><p>Campaign and follow-up information stays together for the team responsible for the next step.</p><a class="btn" href="#workspace">See the workspace</a></article>
-        </div>
-
-        <div class="case-study-head" data-reveal><div><h3 class="section-title">Selected work from the Abacus Desk portfolio.</h3></div><p>Real projects spanning healthcare, industry, mobility and consumer brands.</p></div>
-
-        <div class="portfolio-card-grid" aria-label="Selected Abacus Desk work">
-          <article class="portfolio-card" data-reveal="left"><img src="assets/brand/global-medikit.jpg" alt="Global Medikit project by Abacus Desk"><div class="portfolio-card__body"><span class="section-label">Healthcare · Digital experience</span><h3>Global Medikit</h3><p>A healthcare-focused digital project from the Abacus Desk portfolio.</p><a class="btn" href="https://www.abacusdesk.com/work/">View portfolio</a></div></article>
-          <article class="portfolio-card" data-reveal="right"><img src="assets/brand/sadhu-forging.jpg" alt="Sadhu Forgings project by Abacus Desk"><div class="portfolio-card__body"><span class="section-label">Industry · Digital experience</span><h3>Sadhu Forgings</h3><p>An industrial digital project from the Abacus Desk portfolio.</p><a class="btn" href="https://www.abacusdesk.com/work/">View portfolio</a></div></article>
-        </div>
-
-        <div class="testimonial-head" data-reveal><h3 class="section-title">What clients say</h3><p>Long-standing relationships, described by the people who work with us.</p></div>
-        <div class="customer-story" data-customer-story>
-          <div class="customer-story__content" aria-live="polite"><span class="customer-story__label">Healthcare</span><blockquote data-story-quote>“Abacus Desk responds quickly and that is a huge plus for us because we too believe in speedy service. They have successfully supplemented our IT issues with their expertise and superior technology.”</blockquote><div><strong data-story-name>Shuvankar Pramanick</strong><small data-story-role>HOD – Information Technology · Asian Institute of Medical Sciences</small></div></div>
-          <figure class="customer-story__media"><img data-story-image src="https://www.aimsindia.com/wp-content/uploads/2021/09/international-patients-homepage-asian-hospital-1.jpg" alt="Asian Institute of Medical Sciences"><figcaption>Client story</figcaption></figure>
-          <div class="customer-logo-reel" role="tablist" aria-label="Choose a client story"><div><button class="is-active" type="button" role="tab" aria-selected="true" data-story-tab data-quote="Abacus Desk responds quickly and that is a huge plus for us because we too believe in speedy service. They have successfully supplemented our IT issues with their expertise and superior technology." data-name="Shuvankar Pramanick" data-role="HOD – Information Technology · Asian Institute of Medical Sciences" data-label="Healthcare" data-image="https://www.aimsindia.com/wp-content/uploads/2021/09/international-patients-homepage-asian-hospital-1.jpg" data-alt="Asian Institute of Medical Sciences"><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/01-asian.png" alt="Asian Institute of Medical Sciences"></button><button type="button" role="tab" aria-selected="false" data-story-tab data-quote="Abacus Desk is on call 24X7. We had a major breakdown problem late night recently and they swung into action with lightning speed. Saved us a lot of hassle as our reputation was at stake. They are easily one of the best in business today." data-name="Harinder Bhatia" data-role="AVP – Web Technology Group · KMG Key Management Group" data-label="Technology" data-image="https://kmgus.com/wp-content/uploads/2021/01/homepage.jpg" data-alt="Key Management Group team"><img src="https://www.abacusdesk.com/wp-content/uploads/2021/09/05-kmg.png" alt="KMG Key Management Group"></button></div></div>
+          <button class="client-carousel__arrow client-carousel__arrow--next" type="button" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <section class="section fit" id="fit" style="--h:1">
-      <div class="wrap fit__grid">
-        <div class="fit__intro" data-reveal="left">
-          <h2>A useful lead starts with clear criteria.</h2>
-          <p>We do not use one definition for every business. The criteria are agreed before launch and written into the proposal.</p>
-        </div>
-        <div class="criteria criteria--premium" data-reveal="right">
-          <div><span><strong>Customer fit</strong><p>Industry, company type, size or other agreed business conditions.</p><a class="btn" href="#request">Discuss this criterion</a></span><img src="assets/brand/uflex.jpg" alt="UFLEX project by Abacus Desk" loading="lazy"></div><div><span><strong>Buyer fit</strong><p>The role or person involved in the buying decision.</p><a class="btn" href="#request">Discuss this criterion</a></span><img src="assets/brand/global-medikit.jpg" alt="Global Medikit project by Abacus Desk" loading="lazy"></div><div><span><strong>Geography</strong><p>The cities, states or markets your team can serve.</p><a class="btn" href="#request">Discuss this criterion</a></span><img src="assets/brand/autokoi.jpg" alt="Autokoi project by Abacus Desk" loading="lazy"></div><div><span><strong>Lead validity</strong><p>Required contact information, duplicate rules and review process.</p><a class="btn" href="#request">Discuss this criterion</a></span><img src="assets/brand/sadhu-forging.jpg" alt="Sadhu Forgings project by Abacus Desk" loading="lazy"></div>
-        </div>
-        <div class="industry-line">
-          <span>Your industry</span>
-          <p>Campaign fit is reviewed for your market, buyer, geography and sales process.</p>
+    <section class="section fit pipeline" id="fit" style="--h:1" aria-labelledby="pipeline-title">
+      <div class="wrap">
+        <div class="pipeline__head" data-reveal><p class="eyebrow">Lead criteria</p><h2 id="pipeline-title">A useful lead starts with clear criteria.</h2><p>Focus on growing your business while Abacus Desk builds a clear path from target market to sales-ready conversation.</p></div>
+        <div class="pipeline__grid">
+          <div class="pipeline__steps" data-pipeline-tabs>
+            <div class="pipeline__group"><p>We take care of the campaign journey</p>
+              <button class="pipeline-step is-active" type="button" data-pipeline-tab="0"><span><strong>Target customer profile</strong><small>Industry, company type, size and geography.</small></span><i class="fa-solid fa-chevron-right"></i></button>
+              <button class="pipeline-step" type="button" data-pipeline-tab="1"><span><strong>Buyer and channel activation</strong><small>Decision-maker roles, messaging and campaign channels.</small></span><i class="fa-solid fa-chevron-right"></i></button>
+              <button class="pipeline-step" type="button" data-pipeline-tab="2"><span><strong>Lead qualification</strong><small>Contact validity, intent, fit and duplicate rules.</small></span><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="pipeline__group"><p>Your part in the process</p><div class="pipeline-step pipeline-step--static"><span><strong>Sales follow-up</strong><small>Review context, contact the buyer and move useful conversations forward.</small></span><i class="fa-solid fa-arrow-right"></i></div></div>
+          </div>
+          <div class="pipeline-funnel" aria-label="Abacus Desk lead qualification funnel">
+            <p class="pipeline-funnel__note">Outcomes depend on the offer, market, media budget and sales follow-up.</p>
+            <div class="funnel-stage funnel-stage--one is-active" data-funnel-stage="0"><small>Target market</small><strong>Companies within your agreed customer profile</strong></div>
+            <div class="funnel-tag">Relevant contacts</div>
+            <div class="funnel-stage funnel-stage--two" data-funnel-stage="1"><strong>Decision-makers matched to role and geography</strong></div>
+            <div class="funnel-tag">Qualified leads</div>
+            <div class="funnel-stage funnel-stage--three" data-funnel-stage="2"><strong>Validated enquiries with campaign context</strong></div>
+            <div class="funnel-tag">Sales follow-up</div>
+            <div class="funnel-stage funnel-stage--four"><strong>Useful sales conversations</strong></div>
+          </div>
         </div>
       </div>
     </section>
@@ -374,7 +353,7 @@
           <p>The final proposal should state the charging event, campaign scope, media costs, lead review rules and software access. The website will not promise terms that the agreement does not support.</p>
           <a class="link" href="#request">Request a fit review <span aria-hidden="true">↘</span></a>
         </div>
-        <div class="faq faq--premium">
+        <div class="faq">
           <details open><summary>What counts as a qualified lead?</summary><p>The answer depends on the criteria agreed for your campaign. It may cover company fit, buyer role, geography, intent and contact validity.</p></details>
           <details><summary>Which channels will you use?</summary><p>The campaign approach follows your customer, offer and market. A channel is recommended only when it fits that buying journey.</p></details>
           <details><summary>Is the software charged separately?</summary><p>Lead management software is included with the lead generation service at no additional software cost. Access conditions must be confirmed in the proposal.</p></details>
@@ -386,12 +365,12 @@
     <section class="section request" id="request" style="--h:1">
       <div class="wrap request__grid" data-reveal>
         <div class="request__copy">
-          <p class="section-label">Request your lead plan</p>
+          <p class="eyebrow">Request your lead plan</p>
           <h2>Tell us who you want to reach.</h2>
           <p>Share a few business details. Abacus Desk will review the fit, suggest an initial targeting direction and explain the next commercial step.</p>
           <p class="request__note">Every request is reviewed before a campaign approach is recommended.</p>
         </div>
-        <form class="lead-form" action="mailto:info@abacusdesk.com" method="post" enctype="text/plain" novalidate>
+        <form class="lead-form" action="mailto:hello@abacusdesk.example" method="post" enctype="text/plain" novalidate>
           <div class="field"><label for="name">Your name</label><input id="name" name="Name" autocomplete="name" required><small class="field__error" id="name-error"></small></div>
           <div class="field"><label for="company">Company name</label><input id="company" name="Company" autocomplete="organization" required><small class="field__error" id="company-error"></small></div>
           <div class="field field--wide"><label for="website">Company website</label><input id="website" name="Website" inputmode="url" autocomplete="url" required><small class="field__error" id="website-error"></small></div>
@@ -399,7 +378,7 @@
           <div class="field"><label for="customer">Target customer</label><input id="customer" name="Target customer" required><small class="field__error" id="customer-error"></small></div>
           <div class="field"><label for="geography">Target geography</label><input id="geography" name="Target geography" required><small class="field__error" id="geography-error"></small></div>
           <div class="form__footer field--wide">
-            <button class="btn" type="submit">Request my lead plan</button>
+            <button class="btn btn--primary btn--large" type="submit">Request my lead plan <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></button>
             <p class="form__status" role="status" data-form-status>Your email app will open with these details.</p>
           </div>
         </form>
@@ -407,16 +386,14 @@
     </section>
   </main>
 
-  <footer class="closing closing--premium" id="contact">
-    <div class="footer-stripe" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="wrap footer__intro"><a class="brand brand--footer" href="#top"><img class="brand__logo" src="assets/brand/abacus-logo.png" alt="Abacus Desk"><span>Abacus Desk</span></a><div><h2>Digital growth with a clear path from campaign to follow-up.</h2><p>Strategy, creative execution and lead management brought together for growing businesses.</p></div></div>
-    <div class="wrap footer__grid">
-      <div><strong>Services</strong><a href="#service">Lead generation</a><a href="#process">Campaign process</a><a href="#workspace">Lead management</a><a href="#fit">Lead criteria</a></div>
-      <div><strong>Explore</strong><a href="#work">The work</a><a href="#results">Results</a><a href="https://www.abacusdesk.com/blogs/">Insights</a><a href="https://www.abacusdesk.com/work/">Portfolio</a></div>
-      <div><strong>Company</strong><a href="https://www.abacusdesk.com/about-us/">About</a><a href="https://www.abacusdesk.com/career/">Careers</a><a href="https://www.abacusdesk.com/contact-us/">Contact</a><a href="#request">Request a plan</a></div>
-      <div><strong>Contact</strong><a href="mailto:info@abacusdesk.com">info@abacusdesk.com</a><span>Faridabad · Haryana · India</span><div class="footer-social"><a href="https://www.linkedin.com/company/abacusdesk-it-solutions-pvt-ltd-" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/abacusdesk/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/abacusdesk" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://twitter.com/abacus_desk" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+  <footer class="closing" id="contact">
+    <div class="wrap callbox-footer">
+      <div class="callbox-footer__main">
+        <div class="callbox-footer__about"><a href="#top"><img src="assets/abacus-logo.png" alt="Abacus Desk"></a><p>Abacus Desk is a technology and digital growth partner helping businesses connect campaigns, customer experience and sales follow-up.</p><a href="tel:+919350059390">+91 935 005 9390</a><a href="mailto:info@abacusdesk.com">info@abacusdesk.com</a><span>G1–G3, SSR Corporate Park, Faridabad, Haryana 121003</span><small>VERIFIED PARTNERSHIPS</small><div class="partner-badges"><b>Google Workspace Partner</b><b>Palantir Technologies Partner</b></div></div>
+        <div class="callbox-footer__nav"><div><strong>Services</strong><a href="#service">Lead Generation</a><a href="#process">Campaign Process</a><a href="#workspace">Lead Management</a><a href="https://www.abacusdesk.com/performance-marketing/">Performance Marketing</a></div><div><strong>Solutions</strong><a href="#fit">Lead Criteria</a><a href="#results">Client Stories</a><a href="#commercial">FAQs</a><a href="https://www.abacusdesk.com/work/">Portfolio</a></div><div><strong>Company</strong><a href="https://www.abacusdesk.com/about/">About Abacus Desk</a><a href="https://www.abacusdesk.com/career/">Careers</a><a href="#request">Contact Us</a></div></div>
+      </div>
+      <div class="callbox-footer__bottom"><div><span>© 2026 Abacus Desk. All rights reserved.</span><a href="https://www.abacusdesk.com/privacy-policy/">Privacy Policy</a><a href="https://www.abacusdesk.com/terms-and-services/">Terms &amp; Services</a></div><div class="callbox-footer__social"><a href="https://www.linkedin.com/company/abacusdesk-it-solutions-pvt-ltd-" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.facebook.com/abacusdesk" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com/abacusdesk/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://twitter.com/abacus_desk" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div></div>
     </div>
-    <div class="footer-bottom"><div class="wrap"><span>© 2026 Abacus Desk. All rights reserved.</span><span><a href="https://www.abacusdesk.com/privacy-policy/">Privacy policy</a><a href="https://www.abacusdesk.com/terms-and-services/">Terms &amp; services</a></span></div></div>
   </footer>
 
   <script src="script.js?v=people-editorial-1"></script>
