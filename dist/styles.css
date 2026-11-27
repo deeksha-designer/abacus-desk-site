@@ -737,7 +737,7 @@ p { color: var(--muted); }
 .process-card footer i { border: 0; }
 .eyebrow { display: none; }
 .client-story img { background: #d5d5d5; object-fit: none; object-position: -9999px -9999px; }
-.partner-badges b { display: grid; place-items: center; min-height: 56px; overflow: hidden; background: #ffffff; }
+.partner-badges b { max-width: 138px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 6px; background: rgb(255 255 255); color: rgba(255,255,255,.82); font-size: 10px; line-height: 1.3; display: grid; place-items: center; overflow: hidden; }
 .partner-badges b img { display: block; width: 100%; max-width: 180px; height: 48px; object-fit: contain; }
 .request { background: #2c2c2c; }
 .process-stack > li:nth-child(odd) .process-card footer i { background: #1f1f1f; color: #ff4800; }
