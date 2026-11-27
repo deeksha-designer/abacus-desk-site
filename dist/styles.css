@@ -735,6 +735,7 @@ p { color: var(--muted); }
 .problems .problem-map { border-left: 0; }
 .problems .problem-panel { border-bottom: 0; }
 .process-card footer i { border: 0; }
+.request { background: #2c2c2c; }
 .process-stack > li:nth-child(odd) .process-card footer i { background: #1f1f1f; color: #ff4800; }
 .process-stack > li:nth-child(even) .process-card footer i { background: #ff4800; color: #1f1f1f; }
 
