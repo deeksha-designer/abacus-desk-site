@@ -722,6 +722,16 @@ p { color: var(--muted); }
 .process-stack > li:nth-child(odd) .process-card footer i { background: #1f1f1f; color: #ff4800; }
 .process-stack > li:nth-child(even) .process-card footer i { background: #ff4800; color: #1f1f1f; }
 
+/* Restore pre-theme section colors only */
+.problems { background: #253746; }
+.problem-map { background: #0b342b; }
+.people { background: #253746; }
+.pipeline { background: #1d1d1d; }
+.request { background: #253746; }
+.problem-map__node { width: 58px; height: 58px; position: relative; z-index: 1; display: grid; place-items: center; border-radius: 13px; background: var(--white); color: #ff4800; box-shadow: 0 12px 30px rgba(0,0,0,.12); transition: transform .42s ease, background-color .42s ease; }
+.process-stack > li:nth-child(odd) .process-card { --card-bg: #fcded2; --card-ink: #1f1f1f; }
+.process-stack > li:nth-child(even) .process-card { --card-bg: #1f1f1f; --card-ink: #ffffff; }
+
 /* Requested carousel, funnel and Callbox-style footer refinements */
 .client-stories__head { max-width: 760px; margin: 0 0 30px; text-align: left; }
 .client-stories { padding-block: clamp(52px,5vw,68px); }
